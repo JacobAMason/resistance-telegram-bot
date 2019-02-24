@@ -137,6 +137,17 @@ func getCommands() []Command {
 			},
 		},
 
+                BotCommand{
+			name:        "Opinion",
+			description: "It's not what you said, it's how you said it",
+			matcher:     messageContainsCommandMatcher("opinion"),
+			execute: func(bot TeleBot, update Update, respChan chan BotResponse) {
+				respChan <- *NewTextBotResponse("its not about your opinion. its just that you wont admit when you are wrong/agree with anothers view point OR you just scream insults", update.Message.Chat.ID)
+				respChan <- *NewTextBotResponse("and no, i could give two fucks about your opinion. its your attitude i have a problem with.", update.Message.Chat.ID)
+				respChan <- *NewTextBotResponse("the fact that you have reduced my comments calling you out on your shit attitude and bullshit to a \"rant\" just solidifies my point on how you view other people.", update.Message.Chat.ID)
+			},
+		},
+
 		BotCommand{
 			name:        "God is great",
 			description: "Are we a bad person",
