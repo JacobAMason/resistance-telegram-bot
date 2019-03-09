@@ -62,7 +62,7 @@ var wastedCommand = BotCommand{
 			return
 		}
 
-		if len(path) <= 4 || path[len(path)-4:] != ".mp4" {
+		if len(path) <= 4 || !(path[len(path)-4:] == ".mp4" || path[len(path)-5:] == ".webm" ) {
 			respChan <- *NewTextBotResponse(fmt.Sprintf("Unsupported filetype: %s", path), update.Message.Chat.ID)
 		}
 
