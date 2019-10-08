@@ -8,7 +8,7 @@ var hmCommand = BotCommand{
 	name:        "Hm",
 	description: "Hm",
 	matcher: func(update Update) bool {
-		return (update.Message.From.UserName != "JacobMason" &&
+		return (update.Message.From.UserName != "Yakowob" &&
 			(strings.ToLower(update.Message.Text) == "hm" ||
 			 strings.ToLower(update.Message.Text) == "mm" ||
 			 strings.ToLower(update.Message.Text) == "amazing"))
